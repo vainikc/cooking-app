@@ -1,0 +1,15 @@
+[project]
+name = "cooking-chef-agent"
+version = "0.1.0"
+description = "AI Cooking Teacher - live chef agent (technical test)"
+requires-python = ">=3.10, <3.15"
+dependencies = [
+    "livekit-agents[google,silero,images]~=1.8",
+    "livekit-plugins-google>=1.8.5",
+    "python-dotenv",
+]
+
+[tool.uv]
+package = false
+# From LiveKit's own starter: works around a broken yarl wheel.
+constraint-dependencies = ["yarl<1.24"]

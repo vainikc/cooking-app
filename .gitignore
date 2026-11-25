@@ -1,0 +1,24 @@
+# ---- Secrets: never upload ----
+# Every .env file anywhere in the project (API keys, token server ID)...
+.env
+.env.*
+**/.env
+**/.env.*
+# ...except the blank templates, which hold no keys.
+!**/.env.example
+
+# ---- Private data ----
+# Camera photos the chef saved for debugging (pictures of your kitchen)
+agent/debug_frames/
+
+# ---- Installed packages and build output (re-created automatically) ----
+node_modules/
+agent/.venv/
+__pycache__/
+app/ios/
+app/android/
+app/.expo/
+app/dist/
+
+# ---- Mac clutter ----
+.DS_Store
